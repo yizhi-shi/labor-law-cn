@@ -31,7 +31,8 @@ level: 法律                                  # 必填，见上表
 level_code: 1                                # 必填
 issuer: 全国人民代表大会常务委员会          # 必填，制定/发布机关
 doc_number: ""                               # 发文字号/令号，如 劳部发〔1994〕489号；没有留空
-promulgated: 2018-12-29                      # 必填，公布日期 YYYY-MM-DD
+promulgated: 2018-12-29                      # 必填，本版本公布日期 YYYY-MM-DD
+effective: 2018-12-29                        # 必填，本版本施行日期（修正版取修正案施行日）
 effective: 2018-12-29                        # 必填，施行日期 YYYY-MM-DD；未知填 promulgated
 status: 有效                                 # 必填：有效|已修改|已废止|尚未生效
 status_code: 3                               # 必填：1已废止 2已修改 3有效 4尚未生效

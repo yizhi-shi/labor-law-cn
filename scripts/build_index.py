@@ -59,7 +59,7 @@ def age_groups_for(fm: dict) -> list[str]:
     explicit = fm.get("age_groups")
     if explicit:
         return [a for a in explicit if a]
-    text = fm.get("title", "") + " " + " ".join(fm.get("topics") or []) + " " + (fm.get("notes") or "")
+    text = fm.get("title", "") + " " + (fm.get("notes") or "")
     out: list[str] = []
     for keys, ages in AGE_RULES:
         if any(k in text for k in keys):

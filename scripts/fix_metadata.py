@@ -71,35 +71,22 @@ def split_articles(body: str) -> tuple[str, int]:
                 last_n = cn2int(am.group()[1:-1])
             except ValueError:
                 pass
-        # 数字编号被合并进上一条段尾，如 “……。16. 协商代表……”
-        while True:
-            m_inline = re.search(r"(?<=。)(\d{1,3})[.、]\s*(\S)", line)
-            if not m_inline or not last_n or int(m_inline.group(1)) != last_n + 1:
-                break
-            line = (line[:m_inline.start()] + "\n\n第" + int2cn(int(m_inline.group(1)))
-                    + "条 " + line[m_inline.start(2):])
-            last_n += 1
-            splits += 1
-        if not line or line.startswith("#") or line.startswith(">") or line.startswith("|"):
-            out.append(line)
-            continue
         ms = list(ARTICLE.finditer(line))
-        if not ms:
-            out.append(line)
-            continue
         cuts: list[int] = []
         for m in ms:
-            if m.start() == 0:
+            try:
+                n = cn2int(m.group()[1:-1])
+            except ValueError:
                 continue
-            before = line[m.start() - 1]
             after = line[m.end():]
-            if before not in "。；！？;!?":
+            if not last_n or n != last_n + 1:
                 continue
             if after.startswith(("规定", "、", "和", "及", "至", "之", "所", "的")):
                 continue
             if len(after.strip()) < 8:
                 continue
             cuts.append(m.start())
+            last_n = n
         if not cuts:
             out.append(line)
             continue

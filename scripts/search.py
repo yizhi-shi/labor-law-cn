@@ -134,6 +134,8 @@ def main() -> None:
 
     index = load_index()
     docs = index["documents"]
+    if not args.query and (args.age or args.province or args.level or args.status or args.topic):
+        args.list = True
 
     if args.stats:
         print(json.dumps(index["meta"], ensure_ascii=False, indent=2))

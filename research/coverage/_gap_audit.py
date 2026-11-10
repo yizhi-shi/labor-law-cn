@@ -215,7 +215,7 @@ def main() -> None:
                     add("P2", "日期待修正", path, "施行日期以公布日填充，与官方施行日不符",
                         f"文件={fm.get('effective')} 官方={it['effective']}（SCHEMA 允许未知填公布日，但与事实不符）")
                 else:
-                    add("P1", "日期错误", path, "施行日期被写成正文附则的「原始施行日」，与现行版本官方施行日不符",
+                    add("P2", "日期错误", path, "施行日期被写成正文附则的「原始施行日」，与 flk 现行版本施行日不一致（口径冲突）",
                         f"文件={fm.get('effective')} 官方(flk sxrq)={it['effective']} bbbs={it.get('bbbs')}")
             if it["issuer"] and norm_title(str(fm.get("issuer"))) != norm_title(it["issuer"]):
                 add("P2", "制定机关错误", path, "issuer 与 flk zdjgName 不一致",
