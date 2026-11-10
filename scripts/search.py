@@ -148,7 +148,14 @@ def main() -> None:
             print(f"{n:>5}  {t}")
         return
     if args.list:
-        for d in filter_docs(docs, args)[: args.limit if args.limit else None]:
+        order = {"有效": 0, "尚未生效": 1, "已修改": 2, "已废止": 3}
+        rows = sorted(filter_docs(docs, args),
+                      key=lambda d: (order.get(d["status"], 9), d.get("promulgated") or ""),
+                      reverse=False)
+        rows = sorted(rows, key=lambda d: order.get(d["status"], 9))
+        rows = sorted(rows, key=lambda d: d.get("promulgated") or "", reverse=True)
+        rows = sorted(rows, key=lambda d: order.get(d["status"], 9))
+        for d in rows[: args.limit if args.limit else None]:
             print(f"[{d['status']}] {d['promulgated']} {d['title']}  ({d['path']})")
         return
     if args.doc:
