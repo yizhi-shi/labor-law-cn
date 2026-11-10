@@ -703,6 +703,8 @@ def cleanup_md(md: str, title: str) -> str:
             ln = nxt
         fixed.append(ln)
     lines = fixed
+    # markdown 引用标记（pandoc 对某些段的误判）去掉
+    lines = [re.sub(r"^(?:>\s*)+", "", ln) for ln in lines]
     # docx 里整段加粗的“伪标题/伪题注”去掉 **，按纯文本归一化
     lines = [ln.replace("**", "") for ln in lines]
     lines = ["" if re.match(r"^#{1,6}\s*$", ln.strip()) else ln for ln in lines]

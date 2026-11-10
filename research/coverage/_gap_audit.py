@@ -121,6 +121,7 @@ def analyse(rec: dict) -> None:
         "articles_parsed": len(arts),
         "articles_max": max(arts) if arts else 0,
         "articles_any": len(set(inline_arts)),
+        "articles_any_nums": sorted(set(inline_arts)),
         "articles_dup": len(arts) - len(set(arts)),
         "missing_nums": missing_nums,
         "inline_arts": len(inline_arts),
@@ -266,6 +267,12 @@ def main() -> None:
         if fm.get("sha256") and fm["sha256"] not in (sha256(f["body"].lstrip("\n")), sha256(f["body"])):
             add("P3", "sha256不一致", path, "sha256 与正文哈希不匹配", str(fm["sha256"])[:16])
         # 条文未分行：条文最大编号 > 解析数，且缺号在正文中以行内形式出现
+        all_nums = set(st["articles_any_nums"])
+        if all_nums and f["dir"] not in ("decisions", "normative-documents"):
+            miss = [i for i in range(1, max(all_nums) + 1) if i not in all_nums]
+            if miss:
+                add("P2", "条号缺号", path, "条号序列缺号（Word 自动编号未落到正文，属抽取限制）",
+                    f"共缺 {len(miss)} 条：{miss[:12]}{'…' if len(miss) > 12 else ''}（最大条号 第{max(all_nums)}条）")
         if st["articles_any"] > st["articles_parsed"] and f["dir"] != "decisions":
             add("P1", "条文未分行", path,
                 "条文未按行起排 → 条级解析不完整（影响 articles 索引）",
@@ -348,8 +355,12 @@ def main() -> None:
     for f in dept:
         data_by_title[norm_title(str(f["fm"].get("title", "")))].append(f)
 
+    normative_titles = {norm_title(str(f["fm"].get("title", ""))) for f in files
+                        if f["dir"] == "normative-documents"}
     dept_missing = []
     for nt, infos in rule_by_title.items():
+        if nt in normative_titles:
+            continue  # 已按「规范性文件」层级收录，属分类口径差异而非缺失
         if nt not in data_by_title:
             info = infos[0]
             sev = "P1" if info["core"] else "P3"
