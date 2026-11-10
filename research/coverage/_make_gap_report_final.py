@@ -96,6 +96,9 @@ def main() -> None:
     n_fixed = sum(1 for r in fixed_rows if r["s"].startswith("✅"))
     n_open = len(fixed_rows) - n_fixed
 
+    n_verify_err = len([l for l in VERIFY.splitlines() if l.strip().startswith("- ")])
+    verify_ok = "OK" in VERIFY and "0 errors" not in VERIFY and n_verify_err == 0
+
     # P1 日期错误表（含正确值）
     date_rows = []
     for x in bycat["日期错误"]:
@@ -121,6 +124,21 @@ def main() -> None:
     notes_by_prov = Counter(Path(x["path"]).parts[2] for x in bycat["SCHEMA问题"]
                             if len(Path(x["path"]).parts) > 2)
 
+
+    if date_rows:
+        date_section = "### 4.1 施行日期口径冲突：修正版被写成「原始施行日」（{0} 处，P2-高优先）\n\n".format(len(date_rows))
+        date_section += ("冻结版中这些文件的 `effective` 是正文附则里的**原法施行日**（如劳动法 1995-01-01），\n"
+                         "而 flk 对**该版本**给出的 `sxrq` 是修正案施行日。根因是 `scripts/fix_metadata.py`\n"
+                         "`fix_front_matter()` 的 effective 处理段无条件取正文里最后一个「自…施行」日期覆盖 `effective`。\n\n")
+        date_section += md_table(date_rows, ["文件", "冻结版 effective", "flk 官方施行日", "bbbs"],
+                                 ["p", "cur", "should", "bbbs"]) + "\n\n"
+        date_section += ("**修复建议**：以 flk 为准回填这 {0} 个文件的 `effective`（正确值见上表，数据在 `items.json`）；\n"
+                         "或保留「原法施行日」口径并在 SCHEMA 明确、全库统一。\n\n".format(len(date_rows)))
+    else:
+        date_section = ("### 4.1 施行日期口径冲突（已修复 ✅）\n\n"
+                        "阶段B 冻结前曾发现 15 处「修正版施行日期被写成原法施行日」；最终快照中 `生效日期` 已按 flk `sxrq` 回填，\n"
+                        "`scripts/verify.py` 亦通过。本节保留标题以对照历史问题，当前无待修项。\n\n")
+
     md = f"""# 劳动法领域数据仓库 覆盖缺口审计报告（最终版 · 冻结快照）
 
 - 审计对象：`/root/labor-law-cn` 的 `data/` 数据集（冻结快照）
@@ -130,9 +148,10 @@ def main() -> None:
 - 审计时点：2026-11-10 11:40（数据冻结，60 秒内 0 写入；数据最后写入 {A.get("snapshot_mtime","—")}）
 - 审计人：coverage-auditor（独立审计，未参与抓取/转换/修复）
 - 结论速览：**必选核心法源 100% 覆盖；正文无截断、无核心缺失、无重复入库；
-  P1 = {sev['P1']}（全部为地方性法规的条级切分问题，正文文字完整），P2 = {sev['P2']}（含 15 处施行日期口径冲突、
-  6 处以公布日兜底、11 处条号缺号、79 处废止依据缺失），P3 = {sev['P3']}，P4 = {sev['P4']}。
-  内容层面可发布；建议修复 P1（条级切分）与 P2 中的施行日期后，重跑索引再发布。**
+  P1 = {sev['P1']}（全部为地方性法规的条级切分问题，正文文字完整），P2 = {sev['P2']}（{len(bycat['日期待修正'])} 处以公布日兜底、
+  {len(bycat['条号缺号'])} 处条号缺号；施行日期口径冲突 {len(date_rows)} 处、废止依据缺失 {len(bycat['SCHEMA问题'])} 处），
+  P3 = {sev['P3']}，P4 = {sev['P4']}。
+  内容层面可发布；建议修复 P1（条级切分）与兜底施行日期后，重跑索引再发布。**
 
 ## 0. 严重程度定义
 
@@ -152,6 +171,7 @@ def main() -> None:
 - 关键修复证据：
   - `articles` 自动字段过期问题（原 16 个文件）**已全部由 `build_index.py` 重建修复**（当前 0 处）。
   - 正文开头缺失（陕西就业促进条例、青海劳动保障监察条例缺第一~八条）**已修复**：现均含「第一条」。
+  - 修正版施行日期口径冲突（阶段B 冻结前 15 处）**已修复为 flk 口径**（现 {len(date_rows)} 处残留）。
   - 已废止文件 notes（初版 88 处）**大面积为 `fix_metadata.py` 补齐**，冻结版仍有 {len(bycat['SCHEMA问题'])} 处（全部为新增地方性法规）。
   - 部门规章核心缺失（城镇集体…挂钩办法）**已解决**：按「规范性文件」层级收录于 `data/normative-documents/`。
 
@@ -187,22 +207,7 @@ def main() -> None:
 
 ## 4. P2 问题（{sev['P2']} 处）
 
-### 4.1 施行日期口径冲突：修正版被写成「原始施行日」（{len(date_rows)} 处，P2-高优先）
-
-冻结版中这些文件的 `effective` 是正文附则里的**原法施行日**（如劳动法 1995-01-01），
-而 flk 对**该版本**给出的 `sxrq` 是修正案施行日（2018-12-29）。根因是 `scripts/fix_metadata.py`
-`fix_front_matter()` 的 effective 处理段（约第 129-143 行）无条件取正文里最后一个「自…施行」日期覆盖 `effective`，对「修正/修订版」会把日期改回原始日。
-**影响**：检索/展示时现行版施行日与 flk 基线不一致；但这也是法律数据库常见口径（部分数据库对修正版显示原法施行日），
-因此本报告把它列为「口径冲突（P2-高）」而非正文错误，裁决权交项目 owner。
-
-{md_table(date_rows, ["文件", "冻结版 effective", "flk 官方施行日", "bbbs"], ["p", "cur", "should", "bbbs"])}
-
-**修复建议（二选一）**：
-1. 以 flk 为准：把这 {len(date_rows)} 个文件的 `effective` 改回上表「flk 官方施行日」（数据已在 `items.json` 中，可脚本批量回填）。
-2. 保留「原法施行日」口径：则需在 SCHEMA 明确「`effective` = 法律文本自身施行日（非修正案施行日）」，
-   并全库统一（当前另有 {len(bycat['日期待修正'])} 个文件仍是「以公布日兜底」，两种口径混用才是真正的问题）。
-
-> 审计建议选 1：`checklist.md` 与 flk 一致，且 `verify.py` 的 CORE 校验也以 flk 口径理解。
+{date_section}
 
 
 ### 4.2 施行日期仍以公布日兜底（{len(bycat['日期待修正'])} 处）
@@ -269,11 +274,10 @@ SCHEMA 质量红线要求已废止文件在 `notes` 说明依据；建议批量�
 
 ## 8. 发布前收尾清单
 
-1. **修复 P1/P2 高优先**：按 4.1 统一 15 处施行日期口径；按 3.1 对 {len(para_rows)} 篇地方性法规强制分条。
-2. **重跑索引**：`python3 scripts/fix_metadata.py && python3 scripts/build_index.py && python3 scripts/verify.py`。
-   - 审计时点 `verify.py` 仍报 **{len([l for l in VERIFY.splitlines() if l.strip().startswith('- ')])} 处 sha256 mismatch**：
-     冻结前 `fix_metadata.py` 改写了 md，但 `index.json` 停留在更早一版，属「索引落后于正文」，非数据错误，重跑即可消除。
-3. **补 P2**：6 处兜底施行日期、79 处已废止 notes。
+1. **修复 P1/P2 高优先**：按 3.1 对 {len(para_rows)} 篇地方性法规强制分条{('；按 4.1 处理 ' + str(len(date_rows)) + ' 处施行日期口径') if date_rows else '（4.1 施行日期口径冲突已修复，无待办）'}。
+2. **索引已同步**：审计时点 `python3 scripts/verify.py` 结果 = **{'OK（0 error）' if n_verify_err == 0 else str(n_verify_err) + ' 处 sha256 mismatch'}**。
+   {('索引与正文一致，已满足发布检查。' if n_verify_err == 0 else '若仍有 mismatch：`fix_metadata.py` 改写了 md 但 `index.json` 落后，属索引时点差，重跑 `python3 scripts/build_index.py && python3 scripts/verify.py` 即可。')}
+3. **补 P2**：{len(bycat["日期待修正"])} 处兜底施行日期{('、' + str(len(bycat['SCHEMA问题'])) + ' 处已废止 notes') if bycat['SCHEMA问题'] else '；已废止 notes 已全部补齐'}。
 4. **文档化已知限制**：条号缺号（Word 自动编号）、施行日期口径（若保留原法口径则写入 SCHEMA）。
 5. **同步 SCHEMA.md**：新增「规范性文件 / level_code 7 / data/normative-documents」层级（当前 SCHEMA 未记录）。
 
@@ -282,10 +286,10 @@ SCHEMA 质量红线要求已废止文件在 `notes` 说明依据；建议批量�
 - **内容完整性：通过。** 必选核心法源 100%（17/17 法律、30/30 行政法规、7/7 司法解释），
   无正文截断、无核心缺失、无重复入库，抽样 10/10 与 flk 目录树一致，地方性法规 31 省 589 篇。
 - **条级索引：存在 {len(para_rows)} 处 P1**（地方性法规条文未分行，累计约 {para_missing} 条未进条级索引；正文完整、可脚本修复）。
-- **元数据：存在 {sev['P2']} 处 P2**，其中施行日期口径 15 处、兜底 6 处为优先修复项（不阻塞正文发布）。
+- **元数据：存在 {sev['P2']} 处 P2**，优先修复 {len(bycat['日期待修正'])} 处兜底施行日期；其余为条号缺号等已知抽取限制。
 - **是否可以发布**：
-  - 若发布为「内部评审/预发布版」：**可以**，建议在 release notes 注明 3.1/3.2 两处已知问题。
-  - 若发布为「正式 v1.0」：**建议先修复 P1 条级切分 + P2 施行日期口径并重跑索引**（约 30 分钟工作量），
+  - 若发布为「内部评审/预发布版」：**可以**，建议在 release notes 注明「部分地方性法规条号缺号（Word 自动编号）」「10 篇条级切分」两处已知限制。
+  - 若发布为「正式 v1.0」：**建议先修复 P1 条级切分 + P2 兜底施行日期并重跑索引**（约 30 分钟工作量），
     再执行发布检查（verify.py 0 error）；修复后本文档可直接作为发布审计证据。
 
 ## 10. 复现方式

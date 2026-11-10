@@ -67,6 +67,10 @@ def split_articles(body: str) -> tuple[str, int]:
             line = f"第{int2cn(int(m_num.group(1)))}条 {m_num.group(2)}"
         am = ARTICLE.match(line)
         if am:
+            tail = line[am.end(): am.end() + 2]
+            if tail.startswith(("的", "规定", "之", "、", "和", "及")):
+                am = None  # 这是上一条的引用续行，不是新条
+        if am:
             try:
                 last_n = cn2int(am.group()[1:-1])
             except ValueError:
