@@ -1,0 +1,19 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# 抓取缓存（体积大，可重新生成）
+research/flk_cache/
+research/**/cache/
+research/**/__pycache__/
+.chrome-profile/
+tmp/
+*.tmp
+*.log
+
+# 系统文件
+.DS_Store
+Thumbs.db

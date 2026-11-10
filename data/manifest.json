@@ -1,0 +1,717 @@
+{
+ "generated": "2026-11-10",
+ "source": "国家法律法规数据库 https://flk.npc.gov.cn",
+ "count": 37,
+ "records": [
+  {
+   "id": "flk-2c909fdd678bf17901678bf6e3c00505",
+   "bbbs": "2c909fdd678bf17901678bf6e3c00505",
+   "title": "中华人民共和国劳动法",
+   "level": "法律",
+   "promulgated": "2009-08-27",
+   "effective": "2009-08-27",
+   "status": "已修改",
+   "path": "data/laws/中华人民共和国劳动法-2009.md",
+   "articles_parsed": 107,
+   "articles_in_official_tree": 107,
+   "chars": 8286,
+   "sha256": "28c8bbdabc77fb0ebcb7084761f1af9bcecf49c4678ccea2eb93d0b984287a95",
+   "topics": [
+    "劳动基准",
+    "劳动合同"
+   ],
+   "issuer": "全国人民代表大会常务委员会",
+   "docx": "raw/flk/2c909fdd678bf17901678bf6e3c00505.docx"
+  },
+  {
+   "id": "flk-ff8080816f135f46016f20f16ee11737",
+   "bbbs": "ff8080816f135f46016f20f16ee11737",
+   "title": "中华人民共和国劳动法",
+   "level": "法律",
+   "promulgated": "2018-12-29",
+   "effective": "2018-12-29",
+   "status": "有效",
+   "path": "data/laws/中华人民共和国劳动法-2018.md",
+   "articles_parsed": 107,
+   "articles_in_official_tree": 107,
+   "chars": 8345,
+   "sha256": "78eb8387b25093332d93b0304a7d9055e89f57c1db5318c37c25c3910434fab8",
+   "topics": [
+    "劳动基准",
+    "劳动合同"
+   ],
+   "issuer": "全国人民代表大会常务委员会",
+   "docx": "raw/flk/ff8080816f135f46016f20f16ee11737.docx"
+  },
+  {
+   "id": "flk-2c909fdd678bf17901678bf74d7106b3",
+   "bbbs": "2c909fdd678bf17901678bf74d7106b3",
+   "title": "中华人民共和国劳动合同法",
+   "level": "法律",
+   "promulgated": "2012-12-28",
+   "effective": "2013-07-01",
+   "status": "有效",
+   "path": "data/laws/中华人民共和国劳动合同法-2012.md",
+   "articles_parsed": 98,
+   "articles_in_official_tree": 98,
+   "chars": 11619,
+   "sha256": "367ef46dcfad78b254e423e2cdf0be10eb7e21b00502d71984168d20a983f8c1",
+   "topics": [
+    "劳动合同"
+   ],
+   "issuer": "全国人民代表大会常务委员会",
+   "docx": "raw/flk/2c909fdd678bf17901678bf74d7106b3.docx"
+  },
+  {
+   "id": "flk-2c909fdd678bf17901678bf7b34f07df",
+   "bbbs": "2c909fdd678bf17901678bf7b34f07df",
+   "title": "中华人民共和国就业促进法",
+   "level": "法律",
+   "promulgated": "2015-04-24",
+   "effective": "2015-04-24",
+   "status": "有效",
+   "path": "data/laws/中华人民共和国就业促进法-2015.md",
+   "articles_parsed": 69,
+   "articles_in_official_tree": 69,
+   "chars": 6052,
+   "sha256": "2bd6c8996fde282223654bac6460c852c93f43d07cfda045b04baae3c1149b3c",
+   "topics": [
+    "就业促进"
+   ],
+   "issuer": "全国人民代表大会常务委员会",
+   "docx": "raw/flk/2c909fdd678bf17901678bf7b34f07df.docx"
+  },
+  {
+   "id": "flk-2c909fdd678bf17901678bf64f28039d",
+   "bbbs": "2c909fdd678bf17901678bf64f28039d",
+   "title": "中华人民共和国劳动争议调解仲裁法",
+   "level": "法律",
+   "promulgated": "2007-12-29",
+   "effective": "2008-05-01",
+   "status": "有效",
+   "path": "data/laws/中华人民共和国劳动争议调解仲裁法-2007.md",
+   "articles_parsed": 54,
+   "articles_in_official_tree": 54,
+   "chars": 5536,
+   "sha256": "dfb11fa4d3b01ef43558aa563307d251d5e7df765fa198b6f34154aeb14fea3e",
+   "topics": [
+    "劳动争议处理",
+    "集体合同与工会"
+   ],
+   "issuer": "全国人民代表大会常务委员会",
+   "docx": "raw/flk/2c909fdd678bf17901678bf64f28039d.docx"
+  },
+  {
+   "id": "flk-2c909fdd678bf17901678bf713d305b9",
+   "bbbs": "2c909fdd678bf17901678bf713d305b9",
+   "title": "中华人民共和国社会保险法",
+   "level": "法律",
+   "promulgated": "2010-10-28",
+   "effective": "2011-07-01",
+   "status": "已修改",
+   "path": "data/laws/中华人民共和国社会保险法-2010.md",
+   "articles_parsed": 98,
+   "articles_in_official_tree": 98,
+   "chars": 10134,
+   "sha256": "b83a65b0a36f55c1a125ffd9578206e75b60512a95a37c2c66625ef9d1a239bc",
+   "topics": [
+    "社会保险"
+   ],
+   "issuer": "全国人民代表大会常务委员会",
+   "docx": "raw/flk/2c909fdd678bf17901678bf713d305b9.docx"
+  },
+  {
+   "id": "flk-ff8080816f135f46016f210989b9179a",
+   "bbbs": "ff8080816f135f46016f210989b9179a",
+   "title": "中华人民共和国社会保险法",
+   "level": "法律",
+   "promulgated": "2018-12-29",
+   "effective": "2018-12-29",
+   "status": "有效",
+   "path": "data/laws/中华人民共和国社会保险法-2018.md",
+   "articles_parsed": 98,
+   "articles_in_official_tree": 98,
+   "chars": 10253,
+   "sha256": "4e8a00dbe50bd93054881b61ec3600e7bdd4c474993f60d57529572c157b67f6",
+   "topics": [
+    "社会保险"
+   ],
+   "issuer": "全国人民代表大会常务委员会",
+   "docx": "raw/flk/ff8080816f135f46016f210989b9179a.docx"
+  },
+  {
+   "id": "flk-2c909fdd678bf17901678bf6f8a3050f",
+   "bbbs": "2c909fdd678bf17901678bf6f8a3050f",
+   "title": "中华人民共和国工会法",
+   "level": "法律",
+   "promulgated": "2009-08-27",
+   "effective": "2009-08-27",
+   "status": "已修改",
+   "path": "data/laws/中华人民共和国工会法-2009.md",
+   "articles_parsed": 57,
+   "articles_in_official_tree": 57,
+   "chars": 6074,
+   "sha256": "de3e1e947c4024da89fa85aab5e6cc5b38f6f80667617deb19b3e05729183416",
+   "topics": [
+    "劳动争议处理",
+    "集体合同与工会"
+   ],
+   "issuer": "全国人民代表大会",
+   "docx": "raw/flk/2c909fdd678bf17901678bf6f8a3050f.docx"
+  },
+  {
+   "id": "flk-ff8081817f072a2e017f0ae1a7f600f0",
+   "bbbs": "ff8081817f072a2e017f0ae1a7f600f0",
+   "title": "中华人民共和国工会法",
+   "level": "法律",
+   "promulgated": "2021-12-24",
+   "effective": "2022-01-01",
+   "status": "有效",
+   "path": "data/laws/中华人民共和国工会法-2021.md",
+   "articles_parsed": 58,
+   "articles_in_official_tree": 58,
+   "chars": 6598,
+   "sha256": "9d766374581d3cb2ddc2d6fce502182391dbd5bd2185a484225a20a020c1f8f6",
+   "topics": [
+    "劳动争议处理",
+    "集体合同与工会"
+   ],
+   "issuer": "全国人民代表大会",
+   "docx": "raw/flk/ff8081817f072a2e017f0ae1a7f600f0.docx"
+  },
+  {
+   "id": "flk-2c909fdd678bf17901678bf76e990735",
+   "bbbs": "2c909fdd678bf17901678bf76e990735",
+   "title": "中华人民共和国安全生产法",
+   "level": "法律",
+   "promulgated": "2014-08-31",
+   "effective": "2014-12-01",
+   "status": "已修改",
+   "path": "data/laws/中华人民共和国安全生产法-2014.md",
+   "articles_parsed": 114,
+   "articles_in_official_tree": 114,
+   "chars": 16155,
+   "sha256": "282a9327f3ad4693a1aa4ffbf67b0d2feb0a9885129d20c515a7a4c648a000b0",
+   "topics": [
+    "劳动安全卫生"
+   ],
+   "issuer": "全国人民代表大会常务委员会",
+   "docx": "raw/flk/2c909fdd678bf17901678bf76e990735.docx"
+  },
+  {
+   "id": "flk-ff8081817a66b816017a7956b7db0ad4",
+   "bbbs": "ff8081817a66b816017a7956b7db0ad4",
+   "title": "中华人民共和国安全生产法",
+   "level": "法律",
+   "promulgated": "2021-06-10",
+   "effective": "2021-09-01",
+   "status": "有效",
+   "path": "data/laws/中华人民共和国安全生产法-2021.md",
+   "articles_parsed": 119,
+   "articles_in_official_tree": 119,
+   "chars": 19818,
+   "sha256": "ea95680d211ba367168ab577df43c60e98128b11a6da7ffb5a084f95bb457a26",
+   "topics": [
+    "劳动安全卫生"
+   ],
+   "issuer": "全国人民代表大会常务委员会",
+   "docx": "raw/flk/ff8081817a66b816017a7956b7db0ad4.docx"
+  },
+  {
+   "id": "flk-2c909fdd678bf17901678bf88c0e0aff",
+   "bbbs": "2c909fdd678bf17901678bf88c0e0aff",
+   "title": "中华人民共和国职业病防治法",
+   "level": "法律",
+   "promulgated": "2017-11-04",
+   "effective": "2017-11-05",
+   "status": "已修改",
+   "path": "data/laws/中华人民共和国职业病防治法-2017.md",
+   "articles_parsed": 88,
+   "articles_in_official_tree": 88,
+   "chars": 14223,
+   "sha256": "1c0867b69f45181c601eb0d71499b2ae2ab92135689ae57b51c9867c2a30311b",
+   "topics": [
+    "劳动安全卫生"
+   ],
+   "issuer": "全国人民代表大会常务委员会",
+   "docx": "raw/flk/2c909fdd678bf17901678bf88c0e0aff.docx"
+  },
+  {
+   "id": "flk-ff8080816f135f46016f212ea20a17f8",
+   "bbbs": "ff8080816f135f46016f212ea20a17f8",
+   "title": "中华人民共和国职业病防治法",
+   "level": "法律",
+   "promulgated": "2018-12-29",
+   "effective": "2018-12-29",
+   "status": "有效",
+   "path": "data/laws/中华人民共和国职业病防治法-2018.md",
+   "articles_parsed": 88,
+   "articles_in_official_tree": 88,
+   "chars": 13956,
+   "sha256": "adb200415bad450f31dc91e22de33f9ee693f29bb2f5c0be866e31319ebd08b8",
+   "topics": [
+    "劳动安全卫生"
+   ],
+   "issuer": "全国人民代表大会常务委员会",
+   "docx": "raw/flk/ff8080816f135f46016f212ea20a17f8.docx"
+  },
+  {
+   "id": "flk-2c909fdd678bf17901678bf632a90307",
+   "bbbs": "2c909fdd678bf17901678bf632a90307",
+   "title": "中华人民共和国妇女权益保障法",
+   "level": "法律",
+   "promulgated": "2005-08-28",
+   "effective": "2005-12-01",
+   "status": "已修改",
+   "path": "data/laws/中华人民共和国妇女权益保障法-2005.md",
+   "articles_parsed": 61,
+   "articles_in_official_tree": 61,
+   "chars": 5536,
+   "sha256": "f7a99083e225b245558caed81e649456a9110256b683563001764c6d88fc3caf",
+   "topics": [
+    "特殊群体保护"
+   ],
+   "issuer": "全国人民代表大会",
+   "docx": "raw/flk/2c909fdd678bf17901678bf632a90307.docx"
+  },
+  {
+   "id": "flk-ff8080816f135f46016f1d16e370133e",
+   "bbbs": "ff8080816f135f46016f1d16e370133e",
+   "title": "中华人民共和国妇女权益保障法",
+   "level": "法律",
+   "promulgated": "2018-10-26",
+   "effective": "2018-10-26",
+   "status": "已修改",
+   "path": "data/laws/中华人民共和国妇女权益保障法-2018.md",
+   "articles_parsed": 61,
+   "articles_in_official_tree": 61,
+   "chars": 5611,
+   "sha256": "98171292aecd4c38f12bd008411aa033fc199b61980f66d927fd0b88e362a381",
+   "topics": [
+    "特殊群体保护"
+   ],
+   "issuer": "全国人民代表大会",
+   "docx": "raw/flk/ff8080816f135f46016f1d16e370133e.docx"
+  },
+  {
+   "id": "flk-ff808181841257210184281512de0eec",
+   "bbbs": "ff808181841257210184281512de0eec",
+   "title": "中华人民共和国妇女权益保障法",
+   "level": "法律",
+   "promulgated": "2022-10-30",
+   "effective": "2023-01-01",
+   "status": "有效",
+   "path": "data/laws/中华人民共和国妇女权益保障法-2022.md",
+   "articles_parsed": 86,
+   "articles_in_official_tree": 86,
+   "chars": 8999,
+   "sha256": "9b16b82781e3eea27637743f6d49b598a6cd332cfeefe71ff19188843f1d5d5a",
+   "topics": [
+    "特殊群体保护"
+   ],
+   "issuer": "全国人民代表大会",
+   "docx": "raw/flk/ff808181841257210184281512de0eec.docx"
+  },
+  {
+   "id": "flk-2c909fdd678bf17901678bf6508b03b1",
+   "bbbs": "2c909fdd678bf17901678bf6508b03b1",
+   "title": "中华人民共和国残疾人保障法",
+   "level": "法律",
+   "promulgated": "2008-04-24",
+   "effective": "2008-07-01",
+   "status": "已修改",
+   "path": "data/laws/中华人民共和国残疾人保障法-2008.md",
+   "articles_parsed": 68,
+   "articles_in_official_tree": 68,
+   "chars": 7553,
+   "sha256": "703ad697cbb2aa0a8f3f5db4bf59ddf704a690af0888c19fa5950fd50058a599",
+   "topics": [
+    "综合/其他"
+   ],
+   "issuer": "全国人民代表大会常务委员会",
+   "docx": "raw/flk/2c909fdd678bf17901678bf6508b03b1.docx"
+  },
+  {
+   "id": "flk-ff8080816f135f46016f1d134c88132b",
+   "bbbs": "ff8080816f135f46016f1d134c88132b",
+   "title": "中华人民共和国残疾人保障法",
+   "level": "法律",
+   "promulgated": "2018-10-26",
+   "effective": "2018-10-26",
+   "status": "有效",
+   "path": "data/laws/中华人民共和国残疾人保障法-2018.md",
+   "articles_parsed": 68,
+   "articles_in_official_tree": 68,
+   "chars": 7622,
+   "sha256": "ca8750578a15a09668817aa54fa2b56fe280343033bbf7e64d06e911d5569f2d",
+   "topics": [
+    "综合/其他"
+   ],
+   "issuer": "全国人民代表大会常务委员会",
+   "docx": "raw/flk/ff8080816f135f46016f1d134c88132b.docx"
+  },
+  {
+   "id": "flk-2c909fdd678bf17901678bf746430681",
+   "bbbs": "2c909fdd678bf17901678bf746430681",
+   "title": "中华人民共和国未成年人保护法",
+   "level": "法律",
+   "promulgated": "2012-10-26",
+   "effective": "2013-01-01",
+   "status": "已修改",
+   "path": "data/laws/中华人民共和国未成年人保护法-2012.md",
+   "articles_parsed": 72,
+   "articles_in_official_tree": 72,
+   "chars": 6971,
+   "sha256": "34867eb9861307f9aba0fde7f6c3725fe061a4db4fd435c2e5e2137347b91f45",
+   "topics": [
+    "综合/其他"
+   ],
+   "issuer": "全国人民代表大会常务委员会",
+   "docx": "raw/flk/2c909fdd678bf17901678bf746430681.docx"
+  },
+  {
+   "id": "flk-ff80808175265dd401753fb9c458127b",
+   "bbbs": "ff80808175265dd401753fb9c458127b",
+   "title": "中华人民共和国未成年人保护法",
+   "level": "法律",
+   "promulgated": "2020-10-17",
+   "effective": "2021-06-01",
+   "status": "已修改",
+   "path": "data/laws/中华人民共和国未成年人保护法-2020.md",
+   "articles_parsed": 132,
+   "articles_in_official_tree": 132,
+   "chars": 16679,
+   "sha256": "853e2368dc23bae78b4f2b759e51c9c294a33552c7925da64c2edd582fa89155",
+   "topics": [
+    "综合/其他"
+   ],
+   "issuer": "全国人民代表大会常务委员会",
+   "docx": "raw/flk/ff80808175265dd401753fb9c458127b.docx"
+  },
+  {
+   "id": "flk-ff8081818f197cf001905e567af635a0",
+   "bbbs": "ff8081818f197cf001905e567af635a0",
+   "title": "中华人民共和国未成年人保护法",
+   "level": "法律",
+   "promulgated": "2024-04-26",
+   "effective": "2024-04-26",
+   "status": "有效",
+   "path": "data/laws/中华人民共和国未成年人保护法-2024.md",
+   "articles_parsed": 132,
+   "articles_in_official_tree": 132,
+   "chars": 16750,
+   "sha256": "66658533fe165c832e35bace6e9e9aaf20d4050f002a0fbcfabc9f207fb90763",
+   "topics": [
+    "综合/其他"
+   ],
+   "issuer": "全国人民代表大会常务委员会",
+   "docx": "raw/flk/ff8081818f197cf001905e567af635a0.docx"
+  },
+  {
+   "id": "flk-2c909fdd678bf17901678bf6b19e04f1",
+   "bbbs": "2c909fdd678bf17901678bf6b19e04f1",
+   "title": "中华人民共和国矿山安全法",
+   "level": "法律",
+   "promulgated": "2009-08-27",
+   "effective": "2009-08-27",
+   "status": "有效",
+   "path": "data/laws/中华人民共和国矿山安全法-2009.md",
+   "articles_parsed": 50,
+   "articles_in_official_tree": 50,
+   "chars": 4330,
+   "sha256": "a1c3bf8ed13162e878d8ccd619dded0273d869c040c4a01fc176db63a1d6c1e6",
+   "topics": [
+    "劳动安全卫生"
+   ],
+   "issuer": "全国人民代表大会常务委员会",
+   "docx": "raw/flk/2c909fdd678bf17901678bf6b19e04f1.docx"
+  },
+  {
+   "id": "flk-2c909fdd678bf17901678bf74ede06c7",
+   "bbbs": "2c909fdd678bf17901678bf74ede06c7",
+   "title": "中华人民共和国特种设备安全法",
+   "level": "法律",
+   "promulgated": "2013-06-29",
+   "effective": "2014-01-01",
+   "status": "有效",
+   "path": "data/laws/中华人民共和国特种设备安全法-2013.md",
+   "articles_parsed": 101,
+   "articles_in_official_tree": 101,
+   "chars": 13694,
+   "sha256": "c92b76629bccb92ad9b4d37f827479212b4e70fbb5ca4e9917a3a24901fcf4cc",
+   "topics": [
+    "劳动安全卫生"
+   ],
+   "issuer": "全国人民代表大会常务委员会",
+   "docx": "raw/flk/2c909fdd678bf17901678bf74ede06c7.docx"
+  },
+  {
+   "id": "flk-2933e1a00644487bbd43d0960cb01931",
+   "bbbs": "2933e1a00644487bbd43d0960cb01931",
+   "title": "中华人民共和国危险化学品安全法",
+   "level": "法律",
+   "promulgated": "2025-12-27",
+   "effective": "2026-05-01",
+   "status": "有效",
+   "path": "data/laws/中华人民共和国危险化学品安全法-2025.md",
+   "articles_parsed": 127,
+   "articles_in_official_tree": 0,
+   "chars": 27476,
+   "sha256": "d8c5f2925fa80982e8ffc29d83a2f0b5c0b5d54b0792b5603e4c12f0cffb012f",
+   "topics": [
+    "劳动安全卫生"
+   ],
+   "issuer": "全国人民代表大会常务委员会",
+   "docx": "raw/flk/2933e1a00644487bbd43d0960cb01931.docx"
+  },
+  {
+   "id": "flk-5d298a33dc474da595bf956cec680163",
+   "bbbs": "5d298a33dc474da595bf956cec680163",
+   "title": "中华人民共和国医疗保障法",
+   "level": "法律",
+   "promulgated": "2026-08-28",
+   "effective": "2027-01-01",
+   "status": "尚未生效",
+   "path": "data/laws/中华人民共和国医疗保障法-2026.md",
+   "articles_parsed": 56,
+   "articles_in_official_tree": 0,
+   "chars": 6898,
+   "sha256": "1fdb6c8bd80bf1754ce99d648c54c7371ac73cd34e6b147eebf14d6d46c40372",
+   "topics": [
+    "综合/其他"
+   ],
+   "issuer": "全国人民代表大会常务委员会",
+   "docx": "raw/flk/5d298a33dc474da595bf956cec680163.docx"
+  },
+  {
+   "id": "flk-2c909fdd678bf17901678bf5dd5c01c7",
+   "bbbs": "2c909fdd678bf17901678bf5dd5c01c7",
+   "title": "中华人民共和国职业教育法",
+   "level": "法律",
+   "promulgated": "1996-05-15",
+   "effective": "1996-09-01",
+   "status": "已修改",
+   "path": "data/laws/中华人民共和国职业教育法-1996.md",
+   "articles_parsed": 40,
+   "articles_in_official_tree": 40,
+   "chars": 3502,
+   "sha256": "d0491cf9ec234a4b1cc1fc7211e5e4ab7cfbcdfcc50acdf0107abf6ba3e34dd5",
+   "topics": [
+    "职业培训"
+   ],
+   "issuer": "全国人民代表大会常务委员会",
+   "docx": "raw/flk/2c909fdd678bf17901678bf5dd5c01c7.docx"
+  },
+  {
+   "id": "flk-ff808181802d2853018044c7370108c6",
+   "bbbs": "ff808181802d2853018044c7370108c6",
+   "title": "中华人民共和国职业教育法",
+   "level": "法律",
+   "promulgated": "2022-04-20",
+   "effective": "2022-05-01",
+   "status": "有效",
+   "path": "data/laws/中华人民共和国职业教育法-2022.md",
+   "articles_parsed": 69,
+   "articles_in_official_tree": 69,
+   "chars": 10309,
+   "sha256": "991b8e628b309391b1ce634f5893c0eedcc01504acc4613b24f6283d9d368c7e",
+   "topics": [
+    "职业培训"
+   ],
+   "issuer": "全国人民代表大会常务委员会",
+   "docx": "raw/flk/ff808181802d2853018044c7370108c6.docx"
+  },
+  {
+   "id": "flk-2c909fdd678bf17901678bf8017a08b1",
+   "bbbs": "2c909fdd678bf17901678bf8017a08b1",
+   "title": "中华人民共和国人口与计划生育法",
+   "level": "法律",
+   "promulgated": "2015-12-27",
+   "effective": "2016-01-01",
+   "status": "已修改",
+   "path": "data/laws/中华人民共和国人口与计划生育法-2015.md",
+   "articles_parsed": 47,
+   "articles_in_official_tree": 47,
+   "chars": 4345,
+   "sha256": "4984631bbefc598daf669f605a1d4dc1a1b31b473d1d9c198da2965ae7c5847e",
+   "topics": [
+    "特殊群体保护"
+   ],
+   "issuer": "全国人民代表大会常务委员会",
+   "docx": "raw/flk/2c909fdd678bf17901678bf8017a08b1.docx"
+  },
+  {
+   "id": "flk-ff8081817ba965c4017bb8921d13077a",
+   "bbbs": "ff8081817ba965c4017bb8921d13077a",
+   "title": "中华人民共和国人口与计划生育法",
+   "level": "法律",
+   "promulgated": "2021-08-20",
+   "effective": "2021-08-20",
+   "status": "有效",
+   "path": "data/laws/中华人民共和国人口与计划生育法-2021.md",
+   "articles_parsed": 48,
+   "articles_in_official_tree": 48,
+   "chars": 4500,
+   "sha256": "5b26bafaf25069d31b88c84f602a667d0e5e9f37a53dde536d54d8d97f242671",
+   "topics": [
+    "特殊群体保护"
+   ],
+   "issuer": "全国人民代表大会常务委员会",
+   "docx": "raw/flk/ff8081817ba965c4017bb8921d13077a.docx"
+  },
+  {
+   "id": "flk-2c909fdd678bf17901678bf8313d098d",
+   "bbbs": "2c909fdd678bf17901678bf8313d098d",
+   "title": "中华人民共和国煤炭法",
+   "level": "法律",
+   "promulgated": "2016-11-07",
+   "effective": "2016-11-07",
+   "status": "有效",
+   "path": "data/laws/中华人民共和国煤炭法-2016.md",
+   "articles_parsed": 67,
+   "articles_in_official_tree": 67,
+   "chars": 5248,
+   "sha256": "b567f6eb68b8bb3b63dc483053cd2dd8885b90c3062017713607d7099bdcf4bb",
+   "topics": [
+    "综合/其他"
+   ],
+   "issuer": "全国人民代表大会常务委员会",
+   "docx": "raw/flk/2c909fdd678bf17901678bf8313d098d.docx"
+  },
+  {
+   "id": "flk-2c909fdd678bf17901678bf7187305f5",
+   "bbbs": "2c909fdd678bf17901678bf7187305f5",
+   "title": "中华人民共和国建筑法",
+   "level": "法律",
+   "promulgated": "2011-04-22",
+   "effective": "2011-07-01",
+   "status": "已修改",
+   "path": "data/laws/中华人民共和国建筑法-2011.md",
+   "articles_parsed": 85,
+   "articles_in_official_tree": 85,
+   "chars": 8529,
+   "sha256": "e6f498304746527c8a5b26c3351a4fb4b8339e962be0a3b853bff7dedaf3aaf4",
+   "topics": [
+    "综合/其他"
+   ],
+   "issuer": "全国人民代表大会常务委员会",
+   "docx": "raw/flk/2c909fdd678bf17901678bf7187305f5.docx"
+  },
+  {
+   "id": "flk-ff8080816f135f46016f21740ae61b10",
+   "bbbs": "ff8080816f135f46016f21740ae61b10",
+   "title": "中华人民共和国建筑法",
+   "level": "法律",
+   "promulgated": "2019-04-23",
+   "effective": "2019-04-23",
+   "status": "有效",
+   "path": "data/laws/中华人民共和国建筑法-2019.md",
+   "articles_parsed": 85,
+   "articles_in_official_tree": 85,
+   "chars": 8580,
+   "sha256": "f7a09b83fbcef9c54c3ece175e50e2de348bebdef9700c87642bfc5daf8f51bb",
+   "topics": [
+    "综合/其他"
+   ],
+   "issuer": "全国人民代表大会常务委员会",
+   "docx": "raw/flk/ff8080816f135f46016f21740ae61b10.docx"
+  },
+  {
+   "id": "flk-ff80808175265dd40175d58c08410310",
+   "bbbs": "ff80808175265dd40175d58c08410310",
+   "title": "中华人民共和国退役军人保障法",
+   "level": "法律",
+   "promulgated": "2020-11-11",
+   "effective": "2021-01-01",
+   "status": "有效",
+   "path": "data/laws/中华人民共和国退役军人保障法-2020.md",
+   "articles_parsed": 85,
+   "articles_in_official_tree": 85,
+   "chars": 8488,
+   "sha256": "1c335435f7e370768f0f6fb8c8a154ae4b6189bca89785577be5d30102e38339",
+   "topics": [
+    "综合/其他"
+   ],
+   "issuer": "全国人民代表大会常务委员会",
+   "docx": "raw/flk/ff80808175265dd40175d58c08410310.docx"
+  },
+  {
+   "id": "flk-2c909fdd678bf17901678bf7a4d807c1",
+   "bbbs": "2c909fdd678bf17901678bf7a4d807c1",
+   "title": "中华人民共和国老年人权益保障法",
+   "level": "法律",
+   "promulgated": "2015-04-24",
+   "effective": "2015-04-24",
+   "status": "已修改",
+   "path": "data/laws/中华人民共和国老年人权益保障法-2015.md",
+   "articles_parsed": 85,
+   "articles_in_official_tree": 85,
+   "chars": 7716,
+   "sha256": "941929c3a11c56285e067a009efa91226d32608dc9b4ae26ac06aa5d4438094f",
+   "topics": [
+    "综合/其他"
+   ],
+   "issuer": "全国人民代表大会常务委员会",
+   "docx": "raw/flk/2c909fdd678bf17901678bf7a4d807c1.docx"
+  },
+  {
+   "id": "flk-ff8080816f135f46016f20f4bf851746",
+   "bbbs": "ff8080816f135f46016f20f4bf851746",
+   "title": "中华人民共和国老年人权益保障法",
+   "level": "法律",
+   "promulgated": "2018-12-29",
+   "effective": "2018-12-29",
+   "status": "有效",
+   "path": "data/laws/中华人民共和国老年人权益保障法-2018.md",
+   "articles_parsed": 85,
+   "articles_in_official_tree": 85,
+   "chars": 7801,
+   "sha256": "b2abe5a8b60f8220b671ae1ded7bddd8b58ea32907d9459f501e7d60d125d571",
+   "topics": [
+    "综合/其他"
+   ],
+   "issuer": "全国人民代表大会常务委员会",
+   "docx": "raw/flk/ff8080816f135f46016f20f4bf851746.docx"
+  },
+  {
+   "id": "flk-2c909fdd678bf17901678bf5a6740055",
+   "bbbs": "2c909fdd678bf17901678bf5a6740055",
+   "title": "全国人民代表大会常务委员会关于批准《国务院关于工人退休、退职的暂行办法》的决议",
+   "level": "法律",
+   "promulgated": "1978-05-24",
+   "effective": "1978-05-24",
+   "status": "有效",
+   "path": "data/laws/全国人民代表大会常务委员会关于批准《国务院关于工人退休、退职的暂行办法》的决议-1978.md",
+   "articles_parsed": 0,
+   "articles_in_official_tree": 0,
+   "chars": 146,
+   "sha256": "4a92115e19d3d4965babcb56b3783631d9696adff06347703fc34e584ad8c16c",
+   "topics": [
+    "社会保险"
+   ],
+   "issuer": "全国人民代表大会常务委员会",
+   "docx": "raw/flk/2c909fdd678bf17901678bf5a6740055.docx"
+  },
+  {
+   "id": "flk-2c909fdd678bf17901678bf5acd40087",
+   "bbbs": "2c909fdd678bf17901678bf5acd40087",
+   "title": "第五届全国人民代表大会常务委员会关于批准《国务院关于职工探亲待遇的规定》的决议",
+   "level": "法律",
+   "promulgated": "1981-03-06",
+   "effective": "1981-03-06",
+   "status": "有效",
+   "path": "data/laws/第五届全国人民代表大会常务委员会关于批准《国务院关于职工探亲待遇的规定》的决议-1981.md",
+   "articles_parsed": 0,
+   "articles_in_official_tree": 0,
+   "chars": 150,
+   "sha256": "e8ba4924b88ed6668bae21ffac55c475fe5afd15783478f1e9746619b9d41c32",
+   "topics": [
+    "劳动基准",
+    "工资保障"
+   ],
+   "issuer": "全国人民代表大会常务委员会",
+   "docx": "raw/flk/2c909fdd678bf17901678bf5acd40087.docx"
+  }
+ ],
+ "failures": []
+}
